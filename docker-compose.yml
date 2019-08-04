@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  app:
+    build:
+      dockerfile: Dockerfile
+      context: ./app
+      args:
+        NAME_PROJECT: my-project
+    stdin_open: true
+    tty: true
+    ports:
+      - 8200:8200
+      - 9876:9876
+    volumes:
+      - ./app:/var/app

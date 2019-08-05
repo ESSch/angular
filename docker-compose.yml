@@ -1,5 +1,7 @@
 version: '3'
 
+# https://coursehunter.net/course/angular-4-c-nulya-do-profi
+# docker run --name angular8 -it -v $(pwd)/app:/my-project:rw -p 9876:9876 -p 4200:4200 angular_cli:install bash
 services:
   app:
     build:
@@ -10,7 +12,7 @@ services:
     stdin_open: true
     tty: true
     ports:
-      - 8200:8200
+      - 4200:4200
       - 9876:9876
     volumes:
-      - ./app:/var/app
+      - ./app:/my-project
